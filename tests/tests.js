@@ -7,17 +7,20 @@ var common = require('../page_objects/common');
 
 describe('test AC application', function() {
 
-    beforeEach(()=> {
+    beforeAll(()=> {
         common.clearBrowser()
+    });
+    afterAll(()=> {
+        console.log('Test suite was executed');
     });
 
     describe('execute login in AC', function() {
         let width = 800;
         let height = 600;
         beforeEach(() => {
-            common.maximizeWindow()});
-        afterEach(() => {
             common.customWindow(width,height)});
+        afterEach(() => {
+            common.maximizeWindow()});
 
         it('to login to AC app', function () {
 
