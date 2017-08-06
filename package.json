@@ -1,0 +1,13 @@
+{
+  "name": "ac_tests",
+  "version": "0.0.1",
+  "description": "tests for answerconnect application",
+  "scripts": {
+    "install": "npm run update-webdriver",
+    "e2e": "node node_modules/protractor/bin/protractor config/conf.js",
+    "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update"
+  },
+  "devDependencies": {
+    "protractor": "^5.1.1"
+  }
+}
